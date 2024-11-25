@@ -50,7 +50,6 @@ def main():
         file_size = wc.count_bytes(args.filename) if args.filename else len(data.encode('utf-8'))
         line_count = wc.count_newlines(data)
         word_count = wc.count_words(data)
-        char_count = wc.count_characters(data)
         print(f"{line_count} {word_count} {file_size} {source}")
         return
 
