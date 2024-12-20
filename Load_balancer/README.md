@@ -74,9 +74,9 @@ This project implements a robust Load Balancer to distribute HTTP requests among
 1. Configure the backend servers in `servers/servers.json`:
    ```json
    [
-     {"id": 1, "host": "127.0.0.1", "port": 5001},
-     {"id": 2, "host": "127.0.0.1", "port": 5002},
-     {"id": 3, "host": "127.0.0.1", "port": 5003}
+     {"id": 1, "host": "127.0.0.1", "port": 8001},
+     {"id": 2, "host": "127.0.0.1", "port": 8002},
+     {"id": 3, "host": "127.0.0.1", "port": 8003}
    ]
    ```
 
@@ -109,10 +109,11 @@ Example:
 ## Example Workflow
 
 1. Start three backend servers:
+Simple http servers example
    ```bash
-   python backend_server.py --host 127.0.0.1 --port 5001
-   python backend_server.py --host 127.0.0.1 --port 5002
-   python backend_server.py --host 127.0.0.1 --port 5003
+   python http.server 8001
+   python http.server 8002
+   python http.server 8003
    ```
 
 2. Configure `servers.json` with their details.
@@ -166,7 +167,7 @@ Example:
 ```
 load-balancer/
 ├── core/
-│   ├── balancer.py               # Load balancer implementation
+│   ├── balancer.py               # Load balancer
 │   ├── health_checker.py         # Health check logic
 ├── servers/
 │   ├── server.py                 # Server loader
@@ -182,7 +183,3 @@ load-balancer/
 This project was developed as a solution to the [Load Balancer Coding Challenge](https://codingchallenges.fyi/challenges/challenge-load-balancer/), showcasing concepts of load balancing, fault tolerance, and multithreaded programming.
 
 ---
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
