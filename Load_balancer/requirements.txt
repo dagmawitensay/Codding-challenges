@@ -1,0 +1,9 @@
+certifi==2024.12.14
+charset-normalizer==3.4.0
+idna==3.10
+linecache2==1.0.0
+requests==2.32.3
+six==1.17.0
+traceback2==1.4.0
+unittest2==1.1.0
+urllib3==2.2.3
