@@ -66,6 +66,11 @@ cd url_shortener
 pip install -r requirements.txt
 ```
 
+### 3. Create the database
+```bash
+python initialize_db.py
+```
+
 ### 3. Run the Application
 ```bash
 uvicorn app.main:app --reload
